@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.11.4 on win32)" generated="20230828 14:55:08.922" rpa="false" schemaversion="4">
+<suite id="s1" name="MultipleWinowdsTestCase" source="C:\Users\Rakshith RL\PycharmProjects\pythonProject\POM\TestCasePages\MultipleWinowdsTestCase.robot">
+<test id="s1-t1" name="Multiple window page Test" line="11">
+<kw name="Open my browser" library="WelComePage">
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230828 14:55:09.082" level="INFO">Opening browser 'chrome' to base url 'https://the-internet.herokuapp.com/'.</msg>
+<status status="PASS" starttime="20230828 14:55:09.082" endtime="20230828 14:55:13.260"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230828 14:55:13.260" endtime="20230828 14:55:13.380"/>
+</kw>
+<status status="PASS" starttime="20230828 14:55:09.082" endtime="20230828 14:55:13.380"/>
+</kw>
+<kw name="Verify title" library="WelComePage">
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>The Internet</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20230828 14:55:13.387" level="INFO">Page title is 'The Internet'.</msg>
+<status status="PASS" starttime="20230828 14:55:13.380" endtime="20230828 14:55:13.387"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>Welcome to the-internet</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20230828 14:55:13.404" level="INFO">Current page contains text 'Welcome to the-internet'.</msg>
+<status status="PASS" starttime="20230828 14:55:13.387" endtime="20230828 14:55:13.404"/>
+</kw>
+<status status="PASS" starttime="20230828 14:55:13.380" endtime="20230828 14:55:13.404"/>
+</kw>
+<kw name="Click on Multiple Wondow" library="WelComePage">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${MultipleWindows}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230828 14:55:13.404" level="INFO">Clicking element 'xpath://a[contains(text(),'Multiple Windows')]'.</msg>
+<status status="PASS" starttime="20230828 14:55:13.404" endtime="20230828 14:55:13.748"/>
+</kw>
+<status status="PASS" starttime="20230828 14:55:13.404" endtime="20230828 14:55:13.748"/>
+</kw>
+<kw name="Verify page" library="MultipleWindowsPage">
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>Opening a new window</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20230828 14:55:13.763" level="INFO">Current page contains text 'Opening a new window'.</msg>
+<status status="PASS" starttime="20230828 14:55:13.748" endtime="20230828 14:55:13.763"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>${new_window}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20230828 14:55:13.775" level="INFO">Current page contains element 'xpath://a[contains(text(),'Click Here')]'.</msg>
+<status status="PASS" starttime="20230828 14:55:13.763" endtime="20230828 14:55:13.775"/>
+</kw>
+<status status="PASS" starttime="20230828 14:55:13.748" endtime="20230828 14:55:13.776"/>
+</kw>
+<kw name="Open New Window" library="MultipleWindowsPage">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${new_window}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230828 14:55:13.776" level="INFO">Clicking element 'xpath://a[contains(text(),'Click Here')]'.</msg>
+<status status="PASS" starttime="20230828 14:55:13.776" endtime="20230828 14:55:13.851"/>
+</kw>
+<status status="PASS" starttime="20230828 14:55:13.776" endtime="20230828 14:55:13.851"/>
+</kw>
+<kw name="Test between Windows" library="MultipleWindowsPage">
+<kw name="Switch Window" library="SeleniumLibrary">
+<arg>New Window</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" starttime="20230828 14:55:13.853" endtime="20230828 14:55:14.093"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2sec</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230828 14:55:16.094" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230828 14:55:14.093" endtime="20230828 14:55:16.094"/>
+</kw>
+<kw name="Switch Window" library="SeleniumLibrary">
+<arg>The Internet</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" starttime="20230828 14:55:16.094" endtime="20230828 14:55:16.137"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2sec</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230828 14:55:18.137" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230828 14:55:16.137" endtime="20230828 14:55:18.137"/>
+</kw>
+<kw name="Switch Window" library="SeleniumLibrary">
+<arg>New Window</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" starttime="20230828 14:55:18.137" endtime="20230828 14:55:18.193"/>
+</kw>
+<status status="PASS" starttime="20230828 14:55:13.851" endtime="20230828 14:55:18.193"/>
+</kw>
+<kw name="Verify new window page" library="MultipleWindowsPage">
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>New Window</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20230828 14:55:18.209" level="INFO">Current page contains text 'New Window'.</msg>
+<status status="PASS" starttime="20230828 14:55:18.193" endtime="20230828 14:55:18.209"/>
+</kw>
+<status status="PASS" starttime="20230828 14:55:18.193" endtime="20230828 14:55:18.209"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230828 14:55:18.209" endtime="20230828 14:55:20.339"/>
+</kw>
+<status status="PASS" starttime="20230828 14:55:09.082" endtime="20230828 14:55:20.339"/>
+</test>
+<status status="PASS" starttime="20230828 14:55:08.922" endtime="20230828 14:55:20.341"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="MultipleWinowdsTestCase">MultipleWinowdsTestCase</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
